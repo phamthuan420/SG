@@ -33,6 +33,10 @@ const FileTable = ({ directoryId }) => {
     });
   };
 
+  if (!files || !Array.isArray(files) || files.length === 0) {
+    return <div>Loading...</div>;
+  }
+  
   return (
     <div className="container">
       <h2>List of Files</h2>
